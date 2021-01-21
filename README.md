@@ -114,8 +114,10 @@ I am always glad to hear this script is still making life easy for people!  If
 this script or documentation has saved you some frustration, you can donate to
 support me at [lukesmith.xyz/donate](https://lukesmith.xyz/donate.html).
 
-## Troubleshooting -- Can't send mail?
+## Troubleshooting -- Can't send/receive mail?
 
+- Make sure you unblock ports 25, 587, and 993 from your VPS's firewall.
+- When using Thunderbird, ALWAYS do the manual configuration.
 - Always check `journalctl -xe` to see the specific problem.
 - Check with your VPS host and ask them to enable mail ports. Some providers
   disable them by default. It shouldn't take any time.
@@ -131,7 +133,3 @@ support me at [lukesmith.xyz/donate](https://lukesmith.xyz/donate.html).
   and it will explain why and how to remove yourself.
 - Check your DNS settings using [this site](https://intodns.com/), it'll report
   any issues with your MX records
-- Ensure that port 25 is open on your server.
-  [Vultr](https://www.vultr.com/docs/what-ports-are-blocked) for instance
-  blocks this by default, you need to open a support ticket with them to open
-  it. You can't send mail if 25 is blocked
